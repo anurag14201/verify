@@ -30,3 +30,20 @@ document.getElementById('key-pad'), addEventListener('click', function (event) {
 
 
 });
+
+
+function verify() {
+    const pin = document.getElementById('display-pin').value;
+    const typeNum = document.getElementById('type-num').value;
+
+    const failor = document.getElementById('notify-match');
+    const succes = document.getElementById('notify-fail');
+    if (pin == typeNum) {
+        failor.style.display = 'block';
+        succes.style.display = 'none';
+    }
+    else {
+        failor.style.display = 'none';
+        succes.style.display = 'block';
+    }
+}
